@@ -141,16 +141,18 @@ class Album extends Component{
 
   render(){
     return(
-      <section className="album">
-        <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
-          <div className="album-details">
-            <h1 id="album-title">{this.state.album.title}</h1>
-            <h2 className="artist">{this.state.album.artist}</h2>
-            <div id="release-info">{this.state.album.releaseInfo}</div>
-          </div>
-        </section>
-        <table id="song-list">
+      <section className="album row mt-5">
+        <div className="col-sm-4">
+          <section className="card" id="album-info">
+            <img className="card-img-top img-fluid mr-3" height="200" width="200" id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
+            <div className="album-details card-body">
+              <h4 id="album-title">{this.state.album.title}</h4>
+              <h5 className="artist">{this.state.album.artist}</h5>
+              <div id="release-info">{this.state.album.releaseInfo}</div>
+            </div>
+          </section>
+        </div>
+        <table className="col " id="song-list">
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />
@@ -168,6 +170,7 @@ class Album extends Component{
             }
           </tbody>
         </table>
+
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}

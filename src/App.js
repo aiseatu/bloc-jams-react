@@ -5,13 +5,20 @@ import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
 
+
+
+
+
 class App extends Component {
   render() {
     return (
       <div className="App container">
         <ul className="nav justify-content-center">
           <li className="nav-item">
-            <Link className="nav-link" to='/'>Landing</Link>
+            <Link className="nav-link" to='/'>
+              <img src={process.env.PUBLIC_URL + '/assets/images/bloc_jams_logo.png'} alt="logo"/>
+
+            </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to='/library'>Library</Link>

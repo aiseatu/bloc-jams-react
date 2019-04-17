@@ -24,7 +24,7 @@ class App extends Component {
             <Link className="nav-link" to='/library'>Library</Link>
           </li>
         </ul>
-        <h1 className="container text-center mt-5"> Bloc Jams</h1>
+        <h1 className="container text-center mt-5"> Blurry Jams</h1>
         <main>
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
